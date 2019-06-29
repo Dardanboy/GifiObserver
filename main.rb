@@ -13,8 +13,6 @@ require_relative 'gifi_observer'
 gifi_observer = GifiObserver.new
 gifi_observer.set_cookie("COOKIE for intranet.cpnv.ch HERE !")
 
-require_relative 'notifiers/message_box_notifier'
-MessageBoxNotifier.notify('test', 'test')
 loop do
   gifi_observer.run
   puts gifi_observer.diffs
