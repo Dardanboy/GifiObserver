@@ -1,7 +1,6 @@
 require_relative 'observer_pattern_observer'
 require_relative '../notifiers/message_box_notifier'
 class ChangesObserver < ObserverPatternObserver
-  attr_accessor :receivers # Contain a list of receivers instance that will be called corresponding to each filter (regexp corresponding)
 
   def initialize
     super
