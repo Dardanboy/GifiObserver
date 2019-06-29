@@ -6,7 +6,6 @@
 # This is mostly used because refreshinga manually the Gifi page to look whether there is a new mark or not is time consuming so why not to do a script that alerts on changes ?
 # Author: Dardan Iljazi
 # TODO: - Add checker to know if we are online/offline
-# TODO: - Add checker to know if the diffs are marks changes
 
 require_relative 'gifi_observer'
 
