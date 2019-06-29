@@ -1,3 +1,5 @@
+
+
 # GifiObserver
 
 GifiObserver is a script done for [CPNV's](https://www.cpnv.ch/) students that are in IT section and that have their marks put on Gifi system (<<cpnv's intranet link>>.ch/gifi/index.php)
@@ -35,6 +37,10 @@ gifi_observer.set_cookie("COOKIE for intranet.cpnv.ch HERE !")
 ```
 
 ![Inspect element](inspect_element.png)
+
+### Launch it
+
+- When it's done just launch the script with `ruby main.rb` 
 
 ### Limitation
 
