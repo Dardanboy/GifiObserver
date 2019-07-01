@@ -18,18 +18,16 @@ class DiffChecker < ObserverPatternSubject
     self.index = (self.index == 2) ? 1 : 2
   end
 
-  def diffs
+  def check_for_diffs
     self.changes.clear
 
     if self.result_1 != nil and self.result_2 != nil
       self.changes = self.diff_checker_algorithm.data_diffs(self.result_1, self.result_2)
     end
-
-    self.changes
   end
 
   def has_changes?
-    !self.changes.empty
+    !self.changes.empty?
   end
 
   def changes=(change)

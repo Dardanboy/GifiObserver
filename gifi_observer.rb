@@ -16,9 +16,19 @@ class GifiObserver
     http_request.set_header([['Cookie', cookie]])
   end
 
-  def run
-    response_data = http_request.get_html
-    diff_checker.add_data(response_data) # add_data will wait until 2 different data are set (with add_data) and will check their difference after each call afterwards
+  def run(duration: 15)
+    loop do
+      make_intranet_show_marks
+      response_data = http_request.get
+      diff_checker.add_data(response_data) # add_data will wait until 2 different data are set (with add_data) and will check their difference after each call afterwards
+      diff_checker.check_for_diffs
+      # puts diff_checker.changes if diff_checker.has_changes?
+      sleep(duration)
+    end
+  end
+
+  def make_intranet_show_marks
+    self.http_request.post([['showGrade', 'on']])
   end
 
   def diffs

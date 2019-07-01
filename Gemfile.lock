@@ -4,6 +4,10 @@ GEM
     mini_portile2 (2.4.0)
     nokogiri (1.10.3-x64-mingw32)
       mini_portile2 (~> 2.4.0)
+    nokogiri-diff (0.2.0)
+      nokogiri (~> 1.5)
+      tdiff (~> 0.3, >= 0.3.2)
+    tdiff (0.3.4)
     win32-api (1.8.0-universal-mingw32)
 
 PLATFORMS
@@ -11,6 +15,7 @@ PLATFORMS
 
 DEPENDENCIES
   nokogiri
+  nokogiri-diff
   win32-api (~> 1.4, >= 1.4.8)
 
 BUNDLED WITH

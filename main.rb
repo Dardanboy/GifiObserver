@@ -10,10 +10,5 @@
 require_relative 'gifi_observer'
 
 gifi_observer = GifiObserver.new
-gifi_observer.set_cookie("COOKIE for intranet.cpnv.ch HERE !") # Look the "Installation" doc to know how to put your cookie here
-
-loop do
-  gifi_observer.run
-  puts gifi_observer.diffs
-  sleep(5)
-end
+gifi_observer.set_cookie("COOKIE for intranet.cpnv.ch HERE !")
+gifi_observer.run # Will do an infinite loop inside, can use an argument to set the delay between each loop, by default is set to 15 (seconds)
