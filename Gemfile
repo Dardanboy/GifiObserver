@@ -6,3 +6,4 @@ if Gem.win_platform?
 end
 
 gem 'nokogiri'
+gem 'nokogiri-diff'
